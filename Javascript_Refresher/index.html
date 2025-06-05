@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   "use strict"; // to enable strict mode, helps to avoid bugs
+      //   a = 20; //if strict mode on, Reference error - a is not defined; else , no error
+
+      // var a = 34;
+      // let s = "This is string";
+      // const c = 45;
+
+      let a = 45;
+      a = a + 55;
+      //   console.log(a);
+
+      //   Numbers
+      //   Objects
+      //   Booleans  - true & false
+      //   String
+      //   undefined
+      //   null
+
+      function hello() {
+        // console.log("Hello, Shreyas");
+      }
+      let obja = {
+        r: 34,
+        m: 44,
+        func: function myfunc(number) {
+          //   console.log("The number is " + number);
+        },
+      };
+
+      document.addEventListener("click", function click() {
+        // alert("Ohh, you Clicked !");
+        let conf = confirm("Are you sure?");
+        // console.log(conf);
+      });
+
+      let arr = [22, 50, 2];
+
+      for (let i = 0; i < arr.length; i++) {
+        // console.log(arr[i]);
+      }
+
+      arr.forEach((element) => {
+        // console.log(arr);
+      });
+
+      let arr1 = [32, 22, 78];
+      //   console.log(this);   //Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+
+      function myfunc(number) {
+        // console.log("The number is " + this);  //The number is [object Window]
+      }
+
+      let myfunc1 = (number) => {
+        //Arrow function
+        // console.log("The number is " + this);
+      };
+
+      let mobj = {
+        a: this,
+        myfunc1: () => {
+          //Arrow function
+          console.log(this); //Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+        },
+      };
+
+      mobj.myfunc1(28);
+      console.log(mobj.a); //same as this
+
+      //CallBack function (JavaScript tries not to block execution, the show(exection) must go on)
+      setTimeout(() => {
+        console.log("Ohh, Late Comer");
+      }, 3000); // after 3 sec function will be automatically called
+      console.log("Main neeche wali script hoo(after setTimeOut)"); //Output before setTimeOut
+    </script>
+    <h1>This is JavaScript Refresher</h1>
+  </body>
+</html>
