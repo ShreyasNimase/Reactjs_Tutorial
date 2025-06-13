@@ -7,7 +7,11 @@ export default function NewsItem(props) {
     <div>
       <div className="card" style={{ width: "18rem" }}>
         <img
-          src={imageUrl}
+          src={
+            !imageUrl
+              ? "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/LZEIEASP5HR3BDFDJAQCOPZDXU.JPG&w=1440"
+              : imageUrl
+          }
           className="card-img-top"
           alt="..."
           width={"100px"}
